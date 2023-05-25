@@ -1,0 +1,21 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+    test:
+        name: Try to install ergebnis/phpunit-slow-test-detector
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v1
+        - name: Setup PHP with composer v2
+          uses: shivammathur/setup-php@v2
+          with:
+              php-version: '8.2'
+              tools: composer
+        -
+          name: Install dependencies
+          run: composer install
+        -
+          name: Try to install extension
+          run: composer require --dev -W ergebnis/phpunit-slow-test-detector

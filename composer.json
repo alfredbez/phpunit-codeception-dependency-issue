@@ -1,0 +1,19 @@
+{
+    "name": "alfredbez/phpunit-codeception-dependency-issue",
+    "require-dev": {
+        "codeception/codeception": "^4.1.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alfredbez\\PhpunitCodeceptionDependencyIssue\\": "src/",
+            "Alfredbez\\PhpunitCodeceptionDependencyIssueTest\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alfred Bez",
+            "email": "alfred.bez@googlemail.com"
+        }
+    ],
+    "require": {}
+}
