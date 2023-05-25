@@ -17,5 +17,8 @@ jobs:
           name: Install dependencies
           run: composer install
         -
-          name: Try to install extension
-          run: composer require --dev -W ergebnis/phpunit-slow-test-detector
+          name: Install tools dependencies
+          run: composer install -d tools/phpunit
+        -
+          name: Run tests
+          run: tools/phpunit/vendor/bin/phpunit tests --bootstrap vendor/autoload.php
